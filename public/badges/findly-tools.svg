@@ -1,0 +1,15 @@
+<svg width="139" height="44" viewBox="0 0 139 44" xmlns="http://www.w3.org/2000/svg">
+      <!-- Background -->
+      <rect x="1" y="1" width="137" height="42" rx="5" fill="#212121" stroke="#e5e7eb" stroke-width="1"/>
+      
+      <!-- Logo/Icon -->
+      <image x="12" y="12" width="20" height="20" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAEi0lEQVR42sVYTWgdVRT+zrxJYrDVoka0UMSWqG1prcaW0oI7wYVIl+JexIW4cVdw10W3hULpxlU3CkJwJxZEJJAYTa3aGEnEn0osElO7aJr33p3PzXflcDMzb/KS1xy43HnvnnvnzHd+7zFsA5HMAJgG9XdhZsROEskWSet3vQnZVlAzs0LP4wCeBrALwBqAZQC/mNmdHUNO8xmSUyTb3EjLJD8muY+kbRXJfoQ7mwgUSHY1gv5bJzkmfvPzoIV7VQJ0JFDhhOyQXNP/F8WfD1y4aHcacxKq6xAsStR8SuptydNB8jLJ70jOar7sIsEGyjeDnpkFkicBHANQAGjFZTncAoAv5DCjAKbNjCRNe18B8FZy9FdCtkWSANBXeCI5LCQ+EFodh1xBcoXkHsc/5ELNEMmc5HXxtjUCydfr3ptvAr22nk+5oAyH5A8AMpJ7AQQAqwpFAUAg+Q6AI1rLtT8AuCVHikG+MLOVfhAcJ3mJ5L0Ke7tH8l+Nv0k+pn2HSJ4jeUeIFYnd3taefzRP1tmkF8g0RkleIHmXzekbkhMkP1Wo2Qyd955fp+JMhn0UwLuCv1uxhxodrV8F8DaA16TGrswgDTOFy91R9VPuTGQN0uDL7ndew5sBGJEgiwAmtNZyNrcBBK23AAzr93UvYB2C8cseV/gIAJ5J9sTwchvAX3ruAlgS/wKAMQCPON5IkS+inwH4FcDvCjVFU+fIZYtPyRF8UI6h5j3xDJWEmUnxdJN5WnuyulydNZAx1nVHpMLgkIiBekY8ITqYmXVIDgN4PjEZJnvMzFgVnJsIGGu6E8kLospWAfxUYb/7AexL3hXXpnWubRXBoK97KXlBtJF5M1sVakVy7lE9B//B2vutzi36RjC+lOQDUnGZqmYTdXs6nvDGD7gpB/Fr6AfBKMwBAHudt3maKbNbzS9WfNQ1M1tXCt2SgHH9mJ6LElVd80I51B8EcDg553/UXQWT16W1puXWiRJVZVLVYrIWk/4BxVAf/+I8K+TaaIhQZYjpoarvS1SVOQ+2BPVIY/LcJ0i+SfJ0VYGQNXCQhwEcqlDV1zW3w0dLnCDuvwRgHsCPAK7IhErlyXugGwA8V5KqLBGwzNA7Jf/HfaMAnnVFwlo/Ko6HTbiDojAtAOtpYk+eb5SYhOcJOoN19/Mmgfp4RRGxBODPNLGrRMsAzAH40mkpll1dV4WPaH2kHwGDQsELCW8UZk422qpxsDcATErdsezKXVD/DcCHAD7Tu4paG9SXe8jHAIxXOMJMlYNIcDOzZQBn1Bo5CGBPvK8A+APAkpndLdFOzxLLXGuDyf03dg1O+8t8zbWhVzpt1mBSXbaf5EMkd5E8SfJn1X4hqQNXFH4adQt0dswaebzINxXM3CHzJG+RvFlxoelIyE96obddlJbvmdITkpSWlvgX71cnLQ3UQULFMOA9t6uLzUdmdtVdygfeTjNn0ItSZTtpo0X6nOTuxvYzAAGnSuyuIHmD5Pv3rY1W1QImuVudqSeVL9dUUi2YWdcVETvbHB9UQ3w7EDTXuTJ3qeZOofYfsKboX8z0SQUAAAAASUVORK5CYII="/>
+      
+      <!-- Text -->
+      <text x="40" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="500" fill="#feffff" opacity="0.8" text-transform="uppercase">FEATURED ON</text>
+      
+      <!-- Site name -->
+      <text x="40" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#feffff">
+        Findly.tools
+      </text>
+    </svg>

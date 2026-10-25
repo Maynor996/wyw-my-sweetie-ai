@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Raindance">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="45%" stop-color="#9f1239"/>
+      <stop offset="75%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c4a6e"/>
+      <stop offset="100%" stop-color="#082f49"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#sky)"/>
+  <!-- sun -->
+  <circle cx="320" cy="200" r="72" fill="#fde68a"/>
+  <circle cx="320" cy="200" r="52" fill="#fbbf24"/>
+  <!-- water band -->
+  <path d="M0 320c40-24 80-24 120 0s80 24 120 0 80-24 120 0 80 24 120 0 32-12 32-12v204H0V320z" fill="url(#water)"/>
+  <!-- pier/dock silhouette -->
+  <rect x="96" y="300" width="200" height="18" rx="4" fill="#1c1917"/>
+  <rect x="120" y="318" width="16" height="90" fill="#292524"/>
+  <rect x="176" y="318" width="16" height="90" fill="#292524"/>
+  <rect x="232" y="318" width="16" height="90" fill="#292524"/>
+  <!-- small wave highlight -->
+  <path d="M48 380c24-12 48-12 72 0s48 12 72 0" fill="none" stroke="#7dd3fc" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
+</svg>

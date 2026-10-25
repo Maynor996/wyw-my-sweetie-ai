@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Kiss Cam AI">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <rect x="96" y="128" width="320" height="220" rx="20" fill="#0c4a6e"/>
+  <rect x="120" y="152" width="272" height="172" rx="12" fill="#e0f2fe"/>
+  <circle cx="210" cy="230" r="36" fill="#0284c7"/>
+  <circle cx="302" cy="230" r="36" fill="#0369a1"/>
+  <path d="M230 268c18 22 34 22 52 0" stroke="#be123c" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <ellipse cx="256" cy="400" rx="140" ry="36" fill="#075985"/>
+</svg>

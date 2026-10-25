@@ -1,0 +1,91 @@
+export const meta = {
+  title: 'Privacy Policy',
+  description:
+    'How wywmysweetie AI (wyw-my-sweetie.chatgpt-plus.workers.dev) collects, uses, and protects your data, including portrait photos used for AI trend video generation.',
+  updated_at: '2026-10-16',
+};
+
+## Introduction
+
+We respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you use **wywmysweetie AI** on [wyw-my-sweetie.chatgpt-plus.workers.dev](https://wyw-my-sweetie.chatgpt-plus.workers.dev).
+
+## Information We Collect
+
+We collect the following types of information to provide and improve the service:
+
+1. **Order and contact details** — Email address collected at Stripe checkout (including guest checkout), and optional account details if you sign in with Google or create an account.
+2. **Credits and usage data** — Credit balances, purchases, generation requests, and how you use Create on the site.
+3. **Device and technical data** — Device type, browser, and similar signals used for compatibility, security, and rate limiting.
+4. **Cookies and local storage** — Small data used to keep a guest session, remember preferences, and (on your device only) temporarily hold draft photos during checkout return or retry.
+5. **Payment information** — Billing details handled by Stripe. We do not store full card numbers on our servers.
+6. **Portrait photos you upload** — See **Photo Privacy** below.
+
+## Photo Privacy
+
+<span id="photo-privacy"></span>
+
+wywmysweetie AI needs two portrait photos so we can generate your AI trend video (typically you + a loved one). This section covers those images specifically.
+
+### What photos are uploaded
+
+You upload two images for face/reference-based video generation. Photos must be ones you have the right to use. Adults 18+ only.
+
+### How we process photos
+
+- On Create, your browser sends the images to our generation API (typically as temporary `data:` image payloads, or as https image URLs if you provide those).
+- We forward those images to **third-party AI video generation providers** so they can produce your video. Providers may change as we operate the service.
+- We **do not sell** your photos.
+- We **do not use your photos to train publicly marketed models**. This codebase has no photo training pipeline; photos are used only to fulfill your generation request.
+
+### Retention (what the product actually does)
+
+- **Our servers:** Uploaded portrait photos are **not saved as durable files in our database or video storage**. Generation task records store metadata (effect, resolution, status, credits) — not a retained copy of your upload for later reuse on our side.
+- **Your browser:** A temporary draft may stay in **session storage on your device** so checkout return or a busy-provider retry can resume without re-uploading. That draft lives only in your browser until you clear site data, finish/clear the draft, or the session ends.
+- **Third-party AI providers:** Providers receive the images to run generation and may keep operational copies under **their own** retention rules for a limited time. We cannot promise a provider-side delete timestamp beyond asking them to process only what is needed to deliver your video.
+- **Generated videos:** Finished videos may be stored in our video storage so you can download them later. That is the output file, not your original upload archive.
+
+If we later add server-side upload archiving, we will update this section with a concrete retention window before relying on that behavior.
+
+### How to request deletion
+
+Email **bgnwd15@gmail.com** from the address you used at checkout (or your signed-in account email) and ask us to delete:
+
+- associated guest/account records where feasible,
+- stored generated videos tied to your orders/tasks,
+- and any other personal data we hold for you.
+
+We will confirm what we can delete on our systems. Provider-side copies (if any remain) are handled under those providers’ policies; we will not claim we can erase every upstream cache.
+
+## How We Use Your Information
+
+We use the data we collect to:
+
+- Provide, maintain, and improve the service (including guest checkout and credit unlocks).
+- Process transactions and send related confirmations or restore links.
+- Send technical notices, security alerts, and support messages.
+- Respond to your questions, feedback, and support requests.
+- Detect, prevent, and address fraud and abuse.
+
+## Data Sharing
+
+We do not sell your personal information. We may share data only in these limited cases:
+
+- With service providers who help us operate the service (payment processing, AI video generation, hosting), under confidentiality or data-processing terms where applicable.
+- To comply with legal obligations or respond to lawful requests from public authorities.
+- To protect our rights, property, or safety, or that of our users.
+
+## Data Security
+
+We implement industry-standard security measures including encryption in transit, access controls, and regular reviews. No method of transmission over the Internet is 100% secure, but we work continuously to protect your information.
+
+## Your Rights
+
+You have the right to access, update, export, or delete your personal information. Guest users can request help by emailing us; signed-in users may also use account settings where available. See **Photo Privacy** for photo- and video-specific deletion.
+
+## Changes to This Policy
+
+We may update this Privacy Policy from time to time. We will notify you of any material changes by updating the date at the top of this page and, where appropriate, sending a notice through the service.
+
+## Contact Us
+
+Questions about this Privacy Policy or Photo Privacy: **bgnwd15@gmail.com**. Service: wywmysweetie AI — [wyw-my-sweetie.chatgpt-plus.workers.dev](https://wyw-my-sweetie.chatgpt-plus.workers.dev).

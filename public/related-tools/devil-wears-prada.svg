@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Devil Wears Prada AI">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#292524"/>
+      <stop offset="100%" stop-color="#0c0a09"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <rect x="140" y="120" width="232" height="280" rx="24" fill="#44403c"/>
+  <circle cx="256" cy="210" r="48" fill="#fbbf24"/>
+  <path d="M196 340c12-48 36-68 60-68s48 20 60 68v28H196v-28z" fill="#fbbf24"/>
+  <rect x="170" y="120" width="172" height="28" rx="8" fill="#a8a29e"/>
+</svg>

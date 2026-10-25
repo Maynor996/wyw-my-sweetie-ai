@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Chuttamalle">
+  <defs>
+    <linearGradient id="cg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9f1239"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#cg)"/>
+  <!-- bold C -->
+  <path d="M368 160c-24-40-72-64-128-64-96 0-160 72-160 160s64 160 160 160c56 0 104-24 128-64l-56-36c-12 20-36 36-72 36-56 0-88-40-88-96s32-96 88-96c36 0 60 16 72 36l56-36z" fill="#fde68a"/>
+  <!-- music note accent -->
+  <circle cx="360" cy="340" r="28" fill="#fda4af"/>
+  <rect x="380" y="200" width="18" height="148" rx="4" fill="#fda4af"/>
+  <path d="M398 200c24 8 48 24 64 48v28c-16-20-40-36-64-44v-32z" fill="#fda4af"/>
+</svg>

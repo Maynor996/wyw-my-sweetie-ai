@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Alors on Danse AI">
+  <defs>
+    <linearGradient id="ag" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#52318c"/>
+      <stop offset="100%" stop-color="#1a1228"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#ag)"/>
+  <rect x="48" y="48" width="416" height="416" rx="88" fill="#100e17" opacity="0.35"/>
+  <!-- mini keyboard body -->
+  <rect x="96" y="280" width="320" height="96" rx="16" fill="#c5b3ff"/>
+  <rect x="112" y="296" width="40" height="28" rx="4" fill="#191122"/>
+  <rect x="164" y="296" width="40" height="28" rx="4" fill="#191122"/>
+  <rect x="216" y="296" width="40" height="28" rx="4" fill="#191122"/>
+  <rect x="268" y="296" width="40" height="28" rx="4" fill="#191122"/>
+  <rect x="320" y="296" width="40" height="28" rx="4" fill="#191122"/>
+  <rect x="372" y="296" width="28" height="28" rx="4" fill="#191122"/>
+  <!-- white keys hint -->
+  <rect x="120" y="336" width="28" height="28" rx="3" fill="#f6f3fb"/>
+  <rect x="156" y="336" width="28" height="28" rx="3" fill="#f6f3fb"/>
+  <rect x="192" y="336" width="28" height="28" rx="3" fill="#f6f3fb"/>
+  <rect x="228" y="336" width="28" height="28" rx="3" fill="#f6f3fb"/>
+  <rect x="264" y="336" width="28" height="28" rx="3" fill="#f6f3fb"/>
+  <rect x="300" y="336" width="28" height="28" rx="3" fill="#f6f3fb"/>
+  <rect x="336" y="336" width="28" height="28" rx="3" fill="#f6f3fb"/>
+  <rect x="372" y="336" width="28" height="28" rx="3" fill="#f6f3fb"/>
+  <!-- left person (keys) -->
+  <circle cx="180" cy="170" r="36" fill="#e9d5ff"/>
+  <path d="M132 250c10-44 30-60 48-60s38 16 48 60v18H132v-18z" fill="#e9d5ff"/>
+  <!-- right person (hype) -->
+  <circle cx="340" cy="156" r="36" fill="#f9a8d4"/>
+  <path d="M292 236c10-44 30-60 48-60s38 16 48 60v18H292v-18z" fill="#f9a8d4"/>
+  <!-- sparkle accent -->
+  <circle cx="256" cy="120" r="10" fill="#ffd0b5"/>
+</svg>

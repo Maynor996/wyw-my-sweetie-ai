@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="whitechicks AI">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="45%" stop-color="#4c1d95"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <linearGradient id="car" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdf4ff"/>
+      <stop offset="100%" stop-color="#e9d5ff"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- night sky stars -->
+  <circle cx="90" cy="80" r="3" fill="#fff" opacity="0.8"/>
+  <circle cx="140" cy="120" r="2" fill="#fff" opacity="0.6"/>
+  <circle cx="420" cy="70" r="3" fill="#fff" opacity="0.75"/>
+  <circle cx="380" cy="130" r="2" fill="#fff" opacity="0.5"/>
+  <circle cx="250" cy="60" r="2.5" fill="#fff" opacity="0.7"/>
+  <!-- city glow -->
+  <ellipse cx="256" cy="200" rx="180" ry="40" fill="#f472b6" opacity="0.2"/>
+  <!-- convertible body -->
+  <path d="M70 340
+           C90 300 130 270 180 260
+           L300 255
+           C360 255 410 280 450 320
+           L460 350
+           C420 370 360 385 300 388
+           L180 390
+           C120 388 85 370 70 340 Z" fill="url(#car)"/>
+  <!-- windshield -->
+  <path d="M200 262 L310 258 C330 258 350 270 360 290 L210 295 C205 280 200 270 200 262 Z" fill="#67e8f9" opacity="0.55"/>
+  <!-- door line -->
+  <path d="M250 295 V375" stroke="#a78bfa" stroke-width="4" opacity="0.5"/>
+  <!-- wheels -->
+  <circle cx="150" cy="390" r="42" fill="#0f172a"/>
+  <circle cx="150" cy="390" r="22" fill="#c4b5fd"/>
+  <circle cx="380" cy="388" r="42" fill="#0f172a"/>
+  <circle cx="380" cy="388" r="22" fill="#c4b5fd"/>
+  <!-- duo heads (driver + passenger) -->
+  <circle cx="230" cy="230" r="28" fill="#fde68a"/>
+  <circle cx="310" cy="228" r="28" fill="#fbcfe8"/>
+  <!-- hair hints -->
+  <ellipse cx="222" cy="214" rx="22" ry="14" fill="#1e1b4b"/>
+  <ellipse cx="318" cy="212" rx="22" ry="14" fill="#4c1d95"/>
+  <!-- shoulders -->
+  <path d="M200 255 C210 248 220 246 230 246 s20 2 30 9 L255 290 L200 292 Z" fill="#fde68a" opacity="0.95"/>
+  <path d="M280 255 C290 248 300 246 310 246 s20 2 30 9 L340 290 L285 292 Z" fill="#fbcfe8" opacity="0.95"/>
+  <!-- tiny pom hint on dash -->
+  <ellipse cx="350" cy="300" rx="16" ry="12" fill="#f5f5f4"/>
+  <circle cx="344" cy="294" r="3" fill="#0f172a"/>
+  <circle cx="356" cy="294" r="3" fill="#0f172a"/>
+  <!-- road dash glow -->
+  <rect x="80" y="430" width="350" height="10" rx="5" fill="url(#road)" opacity="0.9"/>
+</svg>

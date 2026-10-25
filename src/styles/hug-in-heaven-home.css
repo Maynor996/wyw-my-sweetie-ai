@@ -1,0 +1,828 @@
+/* Hug In Heaven homepage — warm memorial / Día de Muertos chrome.
+   Scoped under .hih-page so we keep brand independence from any other site. */
+
+.hih-page {
+  --hih-bg: #fafaf9;
+  --hih-paper: #ffffff;
+  --hih-paper-2: #f4f4f2;
+  --hih-ink: #111114;
+  --hih-ink-2: #3d3d45;
+  --hih-muted: #6d6d78;
+  --hih-line: #ebebed;
+  --hih-line-2: #dcdce0;
+  --hih-pink: #ff3d6e;
+  --hih-orange: #ff9a3c;
+  --hih-grad: linear-gradient(120deg, var(--hih-pink), var(--hih-orange));
+  --hih-accent: #ff3d6e;
+  --hih-accent-deep: #d81b52;
+  --hih-accent-soft: #fff0f4;
+  --hih-stage: #0d0d10;
+  --hih-ok: #15803d;
+  --hih-radius: 22px;
+  --hih-radius-s: 12px;
+  --hih-shadow-s: 0 1px 2px #1111140d, 0 2px 8px -2px #1111140f;
+  --hih-shadow: 0 1px 2px #1111140a, 0 18px 40px -20px #11111438;
+  --hih-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --hih-shell: min(1180px, 100% - 40px);
+  background: var(--hih-bg);
+  color: var(--hih-ink);
+}
+
+.hih-page .hih-shell {
+  width: var(--hih-shell);
+  margin-inline: auto;
+}
+
+/* —— Muertos hero wrap —— */
+.hih-muertos {
+  position: relative;
+  overflow: clip;
+  background: linear-gradient(
+    180deg,
+    #fff1db 0%,
+    #fdeef3 58%,
+    var(--hih-bg) 100%
+  );
+}
+
+.hih-muertos > *:not(.hih-petals):not(.hih-papel) {
+  position: relative;
+  z-index: 1;
+}
+
+.hih-papel {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  height: 66px;
+  overflow: hidden;
+}
+
+.hih-papel::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #7a4a25;
+  opacity: 0.5;
+}
+
+.hih-papel-flag {
+  flex: none;
+  width: 54px;
+  height: 56px;
+  margin-top: 3px;
+  transform-origin: 50% 0;
+  animation: hih-papel-sway 5s ease-in-out infinite;
+  animation-delay: calc(var(--i) * -0.37s);
+}
+
+.hih-papel-flag svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 2px 2px #501e0a26);
+}
+
+@keyframes hih-papel-sway {
+  0%,
+  to {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+.hih-petals {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hih-petal {
+  position: absolute;
+  top: -24px;
+  left: var(--x);
+  width: var(--s);
+  height: calc(var(--s) * 0.7);
+  background: var(--c);
+  border-radius: 70% 10%;
+  opacity: 0;
+  animation: hih-petal-fall var(--d) linear infinite;
+  animation-delay: var(--dl);
+  will-change: transform;
+}
+
+@keyframes hih-petal-fall {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0);
+  }
+  8% {
+    opacity: 0.85;
+  }
+  50% {
+    transform: translate(26px, 460px) rotate(200deg);
+  }
+  88% {
+    opacity: 0.75;
+  }
+  to {
+    opacity: 0;
+    transform: translate(-10px, 920px) rotate(400deg);
+  }
+}
+
+/* —— Hero grid (copy + sample left, sticky tool right) —— */
+.hih-tpl-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.9fr);
+  align-items: start;
+  gap: clamp(24px, 4vw, 48px);
+  padding: clamp(12px, 2vw, 24px) 0 clamp(48px, 6vw, 80px);
+}
+
+.hih-tpl-main {
+  min-width: 0;
+}
+
+.hih-tpl-side {
+  min-width: 0;
+  position: sticky;
+  top: 84px;
+}
+
+.hih-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 14px;
+  padding: 5px 11px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--hih-ink);
+  background: #ffe14d;
+  border-radius: 7px;
+  box-shadow: 3px 3px 0 var(--hih-ink);
+  transform: rotate(-2deg);
+  animation: hih-eb-wiggle 6s ease-in-out infinite;
+}
+
+@keyframes hih-eb-wiggle {
+  0%,
+  88%,
+  to {
+    transform: rotate(-2deg);
+  }
+  92% {
+    transform: rotate(2deg) scale(1.04);
+  }
+  96% {
+    transform: rotate(-3deg);
+  }
+}
+
+.hih-tpl-main h1 {
+  margin: 0 0 14px;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(36px, 5.4vw, 62px);
+  font-weight: 750;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+  color: var(--hih-ink);
+}
+
+.hih-tpl-main h1 .hih-grad-text {
+  background: var(--hih-grad);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(2px 2px 0 var(--hih-ink));
+}
+
+.hih-lead {
+  margin: 0 0 16px;
+  max-width: 40em;
+  font-size: clamp(16px, 1.45vw, 18px);
+  line-height: 1.55;
+  color: var(--hih-ink-2);
+}
+
+.hih-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.hih-facts li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--hih-ink-2);
+  background: var(--hih-paper);
+  border: 1px solid var(--hih-line);
+  border-radius: 999px;
+}
+
+.hih-facts li svg {
+  color: var(--hih-accent);
+  flex: none;
+}
+
+.hih-instruction {
+  margin: 0 0 18px;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--hih-ink-2);
+  background: var(--hih-accent-soft);
+  border: 1px solid #ffd0dc;
+  border-radius: 14px;
+}
+
+/* —— Sample compare stage —— */
+.hih-compare {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  margin: 0 0 8px;
+}
+
+.hih-compare-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: clamp(280px, 38vw, 460px);
+  overflow: hidden;
+  background: var(--hih-stage);
+  border-radius: var(--hih-radius);
+  box-shadow: var(--hih-shadow);
+}
+
+.hih-compare-stage video,
+.hih-compare-stage img.hih-poster {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+}
+
+.hih-compare-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--hih-grad);
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.hih-compare-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.hih-compare-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.hih-compare-tab {
+  padding: 7px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--hih-ink-2);
+  background: var(--hih-paper);
+  border: 1px solid var(--hih-line-2);
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.hih-compare-tab:hover {
+  border-color: var(--hih-muted);
+  color: var(--hih-ink);
+}
+
+.hih-compare-tab.on {
+  background: var(--hih-ink);
+  color: #fff;
+  border-color: var(--hih-ink);
+}
+
+.hih-compare-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hih-compare-inputs img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--hih-paper);
+  box-shadow: var(--hih-shadow-s);
+}
+
+.hih-compare-inputs img + img {
+  margin-left: -14px;
+}
+
+.hih-compare-note {
+  margin: 0;
+  font-size: 13px;
+  color: var(--hih-muted);
+}
+
+/* —— Create / tool chrome overrides —— */
+.hih-page .hih-tool {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+  padding: clamp(18px, 2.4vw, 26px);
+  background: var(--hih-paper);
+  border: 1px solid var(--hih-line);
+  border-radius: 26px;
+  box-shadow: var(--hih-shadow);
+  overflow: hidden;
+}
+
+.hih-page .hih-tool-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: -4px 0 0;
+}
+
+.hih-page .hih-tool-eyebrow {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--hih-accent-deep);
+}
+
+.hih-page .hih-tool-title {
+  margin: 0;
+  width: 100%;
+  font-size: clamp(20px, 2.2vw, 24px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--hih-ink);
+}
+
+.hih-page .hih-slot-num {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin-top: 1px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #fff;
+  background: var(--hih-grad);
+  border-radius: 50%;
+}
+
+.hih-page .hih-slot-stage {
+  border: 1.5px dashed var(--hih-line-2);
+  background: var(--hih-paper-2);
+  border-radius: 18px;
+  min-height: 170px;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.hih-page .hih-slot-stage:hover {
+  border-color: var(--hih-accent);
+  background: var(--hih-accent-soft);
+}
+
+.hih-page .hih-cta-primary {
+  background: var(--hih-ink) !important;
+  color: #fff !important;
+  border-color: var(--hih-ink) !important;
+  border-radius: 999px !important;
+  font-weight: 650 !important;
+  min-height: 54px;
+  box-shadow: none;
+}
+
+.hih-page .hih-cta-primary:hover {
+  background: #26262c !important;
+  box-shadow: 0 10px 24px -10px #ff3d6ea6 !important;
+}
+
+.hih-page .hih-promo {
+  padding: 10px 14px;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--hih-ink-2);
+  background: var(--hih-paper);
+  border: 1px solid var(--hih-line);
+  border-radius: 14px;
+  box-shadow: var(--hih-shadow-s);
+}
+
+.hih-page .hih-promo-badge {
+  display: inline-flex;
+  margin-right: 8px;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--hih-grad);
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+/* —— Sections —— */
+.hih-section {
+  padding: clamp(52px, 7vw, 92px) 0;
+}
+
+.hih-section-band {
+  background: var(--hih-paper);
+  border-block: 1px solid var(--hih-line);
+}
+
+.hih-section h2.hih-h2 {
+  margin: 0 0 clamp(22px, 3vw, 36px);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(26px, 3.2vw, 36px);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  color: var(--hih-ink);
+}
+
+.hih-prose {
+  max-width: 780px;
+}
+
+.hih-prose p {
+  margin: 0 0 1.1em;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--hih-ink-2);
+}
+
+.hih-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.hih-feature-card {
+  padding: 22px;
+  background: var(--hih-paper);
+  border: 1px solid var(--hih-line);
+  border-radius: var(--hih-radius);
+  box-shadow: var(--hih-shadow-s);
+}
+
+.hih-feature-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 14px;
+  color: var(--hih-accent-deep);
+  background: var(--hih-accent-soft);
+  border-radius: 12px;
+}
+
+.hih-feature-card h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--hih-ink);
+}
+
+.hih-feature-card p {
+  margin: 8px 0 0;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--hih-ink-2);
+}
+
+.hih-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 22px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: hih-step;
+}
+
+.hih-steps li {
+  position: relative;
+  padding: 20px 18px 18px;
+  background: var(--hih-paper);
+  border: 1px solid var(--hih-line);
+  border-radius: var(--hih-radius);
+  box-shadow: var(--hih-shadow-s);
+  counter-increment: hih-step;
+}
+
+.hih-steps li::before {
+  content: counter(hih-step, decimal-leading-zero);
+  display: block;
+  margin-bottom: 8px;
+  font-size: 28px;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  background: var(--hih-grad);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.hih-steps h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.hih-steps p {
+  margin: 8px 0 0;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--hih-ink-2);
+}
+
+/* Pricing packs */
+.hih-packs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.hih-pack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px;
+  background: var(--hih-paper);
+  border: 1px solid var(--hih-line);
+  border-radius: var(--hih-radius);
+  box-shadow: var(--hih-shadow-s);
+}
+
+.hih-pack.featured {
+  background:
+    linear-gradient(var(--hih-paper), var(--hih-paper)) padding-box,
+    var(--hih-grad) border-box;
+  border: 2px solid transparent;
+  box-shadow: var(--hih-shadow);
+}
+
+.hih-pack-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 3px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--hih-grad);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.hih-pack-amount {
+  margin: 8px 0 0;
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--hih-ink);
+}
+
+/* FAQ */
+.hih-faq {
+  max-width: 840px;
+  margin-inline: auto;
+}
+
+.hih-faq-item {
+  border-bottom: 1px solid var(--hih-line-2);
+}
+
+.hih-faq-item button {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 40px 20px 0;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 650;
+  color: var(--hih-ink);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.hih-faq-item button .hih-faq-mark {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--hih-accent);
+  transition: transform 0.3s var(--hih-ease);
+}
+
+.hih-faq-item button[aria-expanded='true'] .hih-faq-mark {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.hih-faq-item p {
+  margin: 0;
+  max-width: 46em;
+  padding-bottom: 20px;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--hih-ink-2);
+}
+
+/* Demo strip tweaks inside page */
+.hih-page .hih-demo {
+  background: #fff8f0;
+  border-block: 1px solid #f0e0d0;
+}
+
+.hih-page .hih-demo .hih-h2 {
+  margin-bottom: 8px;
+}
+
+.hih-cta-band {
+  margin: 0 auto;
+  max-width: 920px;
+  padding: clamp(36px, 5vw, 56px) clamp(22px, 4vw, 48px);
+  text-align: center;
+  background: linear-gradient(135deg, #fff0f4 0%, #fff8eb 55%, #eefcf6 100%);
+  border: 1px solid #ffd0dc;
+  border-radius: 28px;
+  box-shadow: var(--hih-shadow-s);
+}
+
+.hih-respect {
+  max-width: 840px;
+  margin-inline: auto;
+  padding: clamp(28px, 4vw, 40px);
+  background: var(--hih-accent-soft);
+  border: 1px solid #ffd0dc;
+  border-radius: 28px;
+}
+
+.hih-sticky-bar {
+  border-bottom: 1px solid var(--hih-line);
+  background: #fafaf9eb;
+  -webkit-backdrop-filter: saturate(1.6) blur(14px);
+  backdrop-filter: saturate(1.6) blur(14px);
+}
+
+@media (max-width: 960px) {
+  .hih-tpl-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hih-tpl-side {
+    position: static;
+  }
+
+  .hih-feature-grid,
+  .hih-steps,
+  .hih-packs {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hih-feature-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hih-papel-flag {
+    width: 42px;
+    height: 44px;
+  }
+
+  .hih-papel {
+    height: 54px;
+  }
+}
+
+/* Dark default: warm memorial palette on charcoal (keeps pink/orange accents) */
+.dark .hih-page {
+  --hih-bg: #0e0c0d;
+  --hih-paper: #181416;
+  --hih-paper-2: #221c1f;
+  --hih-ink: #f7f2f3;
+  --hih-ink-2: #d0c4c8;
+  --hih-muted: #a8979d;
+  --hih-line: #ffffff1a;
+  --hih-line-2: #ffffff2e;
+  --hih-accent-soft: #ff3d6e24;
+  --hih-ok: #4ade80;
+  --hih-shadow-s: 0 1px 2px #00000066, 0 2px 8px -2px #00000080;
+  --hih-shadow: 0 1px 2px #00000080, 0 22px 48px -24px #000000cc;
+  color-scheme: dark;
+  background: var(--hih-bg);
+  color: var(--hih-ink);
+}
+
+.dark .hih-page header,
+.dark .hih-page [data-site-header] {
+  border-color: var(--hih-line) !important;
+  background: rgba(14, 12, 13, 0.96) !important;
+}
+
+.dark .hih-muertos {
+  background: linear-gradient(
+    180deg,
+    #1a1210 0%,
+    #1c1016 58%,
+    var(--hih-bg) 100%
+  );
+}
+
+.dark .hih-papel::before {
+  background: #e8b48a;
+  opacity: 0.45;
+}
+
+.dark .hih-eyebrow {
+  color: #111114;
+  background: #ffe14d;
+  box-shadow: 3px 3px 0 #f7f2f3;
+}
+
+.dark .hih-instruction {
+  border-color: #ff3d6e55;
+}
+
+.dark .hih-page .hih-demo {
+  background: #161014;
+  border-block-color: #ffffff1a;
+}
+
+.dark .hih-cta-band {
+  background: linear-gradient(135deg, #2a121c 0%, #241810 55%, #12201a 100%);
+  border-color: #ff3d6e55;
+}
+
+.dark .hih-respect {
+  border-color: #ff3d6e55;
+}
+
+.dark .hih-sticky-bar {
+  background: #0e0c0deb;
+}
+
+.dark .hih-page .hih-cta-primary:hover {
+  background: #ffffff !important;
+  color: #111114 !important;
+}
